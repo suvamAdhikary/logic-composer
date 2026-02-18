@@ -2,7 +2,13 @@
 
 A Visual Condition Builder built with React and TypeScript that allows users to construct nested logical expressions using groups and rules.
 
-This project focuses on clean state modeling, immutable updates, recursive rendering, and correctness — not visual styling.
+This implementation focuses on clean state modeling, immutable updates, recursive rendering, and correctness — not visual styling.
+
+---
+
+## Live Demo
+
+🔗 https://logic-composer-gamma.vercel.app/
 
 ---
 
@@ -59,6 +65,19 @@ To preview the production build locally:
 ```bash
 yarn preview
 ```
+
+---
+
+## Deployment
+
+This project is deployed on **Vercel**.
+
+Build configuration:
+- Framework: Vite
+- Build command: `yarn build`
+- Output directory: `dist`
+
+The application is fully client-side and requires no backend services.
 
 ---
 
@@ -165,7 +184,7 @@ The UI remains stable under all deletion scenarios.
 
 ## Assumptions
 
-- The condition tree is rooted in a default `GroupNode` to ensure a consistent logical structure.
+- The condition tree is rooted in a default `GroupNode` to ensure consistent logical structure.
 - Rules cannot exist without a parent group.
 - The root group cannot be deleted.
 - Rule values are treated as strings for simplicity.
@@ -211,17 +230,6 @@ src/
  ├── main.tsx
  └── index.css
 ```
-
----
-
-## Deployment
-
-For Netlify:
-- Build command: `yarn build`
-- Publish directory: `dist`
-
-For GitHub Pages:
-- Configure `base` in `vite.config.ts` if deploying under a repository path.
 
 ---
 
