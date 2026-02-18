@@ -22,7 +22,7 @@ This project focuses on clean state modeling, immutable updates, recursive rende
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/suvamAdhikary/logic-composer.git
 cd logic-composer
 ```
 
