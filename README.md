@@ -1,5 +1,11 @@
 # Logic Composer
 
+[![CI](https://github.com/suvamAdhikary/logic-composer/actions/workflows/ci.yml/badge.svg)](https://github.com/suvamAdhikary/logic-composer/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.2-61dafb.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646cff.svg)](https://vitejs.dev/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 A Visual Condition Builder built with React and TypeScript that allows users to construct nested logical expressions using groups and rules.
 
 This implementation focuses on clean state modeling, immutable updates, recursive rendering, and correctness — not visual styling.
@@ -8,7 +14,10 @@ This implementation focuses on clean state modeling, immutable updates, recursiv
 
 ## Live Demo
 
-🔗 https://logic-composer-gamma.vercel.app/
+🔗 [https://logic-composer-gamma.vercel.app/](https://logic-composer-gamma.vercel.app/)
+
+![Demo](./demo.gif)
+*Placeholder for demo GIF - capture your workflow and replace demo.gif*
 
 ---
 
@@ -50,6 +59,20 @@ The app will be available at:
 http://localhost:5173
 ```
 
+### 4. Run tests
+
+```bash
+yarn test
+```
+
+Run tests in watch mode, or use:
+
+```bash
+yarn test:run      # Run tests once
+yarn test:ui       # Run tests with UI
+yarn test:coverage # Run tests with coverage report
+```
+
 ---
 
 ## Build for Production
@@ -65,6 +88,21 @@ To preview the production build locally:
 ```bash
 yarn preview
 ```
+
+---
+
+## Testing
+
+This project uses **Vitest** as the testing framework with comprehensive test coverage for:
+
+- **Tree utility functions** (`treeUtils.ts`): Tests for all immutable tree operations including `updateNodeById`, `insertChild`, and `deleteNodeById`
+- **Recursive evaluation logic**: Deep nesting scenarios and edge cases
+- **Type definitions**: Validation of discriminated unions and type safety
+- **ID generation**: UUID uniqueness and format validation
+
+All core domain logic is thoroughly tested to ensure correctness and reliability.
+
+Run `yarn test:coverage` to generate a detailed coverage report.
 
 ---
 
